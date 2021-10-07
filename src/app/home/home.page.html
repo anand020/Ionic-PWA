@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Speedo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,20 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Speedo</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>{{speed}} Km/h</strong>
+
+    <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+    <br>
+    <strong>lat : {{lat}}</strong> <br>
+    <strong>long : {{long}}</strong>
+
   </div>
+
+  <ion-button expand="block" (click)="startGettingSpeed()">Start</ion-button>
+  <ion-button expand="block" (click)="startGettingSpeed()">Stop</ion-button>
 </ion-content>
